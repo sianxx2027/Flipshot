@@ -29,11 +29,15 @@
 				<li class="nav-item" *ngIf="isAuthenticated()">
 					<a class="nav-link" routerLink="/collections" routerLinkActive="active">Collections</a>
 				</li>
-				<li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+				<li class="nav-item ms-lg-3 mt-2 mt-lg-0" *ngIf="!isAuthenticated()">
 					<a class="nav-link" routerLink="/login" routerLinkActive="active">Log in</a>
 				</li>
-				<li class="nav-item mt-2 mt-lg-0">
+				<li class="nav-item mt-2 mt-lg-0" *ngIf="!isAuthenticated()">
 					<a class="btn btn-light rounded-pill px-4" routerLink="/signup">Sign up</a>
+				</li>
+				<li class="nav-item d-flex align-items-center gap-2 mt-2 mt-lg-0" *ngIf="isAuthenticated()">
+					<span class="navbar-user">Hi, {{ userName }}</span>
+					<button class="btn btn-outline-light btn-sm rounded-pill px-3" type="button" (click)="logout()">Log out</button>
 				</li>
 			</ul>
 		</div>

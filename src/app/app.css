@@ -24,6 +24,12 @@
 	color: #fff;
 }
 
+.navbar-user {
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+
 @media (max-width: 991.98px) {
 	.flipshot-navbar .navbar-collapse {
 		padding-top: 1rem;

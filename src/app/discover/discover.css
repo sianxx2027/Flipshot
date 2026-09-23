@@ -22,6 +22,12 @@
   font-weight: 800;
 }
 
+.search-input {
+  border-radius: 999px;
+  border: 1px solid #dbeafe;
+  box-shadow: none;
+}
+
 .corrosion-feature {
   border-radius: 1.25rem;
   background: #fef3c7;

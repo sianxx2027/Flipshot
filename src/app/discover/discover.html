@@ -4,12 +4,26 @@
     <h1 class="display-5 fw-bold mb-3">Ideas worth keeping.</h1>
     <p class="lead text-secondary mb-5">Browse a considered mix of images, moods, and visual inspiration.</p>
 
+    <div class="row mb-4">
+      <div class="col-lg-6">
+        <input
+          class="form-control form-control-lg search-input"
+          type="text"
+          placeholder="Search inspiration..."
+          [(ngModel)]="searchTerm"
+        />
+      </div>
+    </div>
+
     <div class="row g-4">
-      <div class="col-md-4" *ngFor="let topic of ['Quiet mornings', 'Golden hour', 'Urban rhythm']">
+      <div class="col-md-4" *ngFor="let topic of filteredTopics; let i = index">
         <article class="topic-card p-4 h-100">
-          <span class="topic-number">0{{ ['Quiet mornings', 'Golden hour', 'Urban rhythm'].indexOf(topic) + 1 }}</span>
+          <span class="topic-number">0{{ i + 1 }}</span>
           <h2 class="h4 mt-5 mb-2">{{ topic }}</h2>
-          <p class="text-secondary mb-0">A new visual direction to explore.</p>
+          <p class="text-secondary mb-3">A new visual direction to explore.</p>
+          <button class="btn btn-outline-primary rounded-pill btn-sm" type="button" (click)="saveTopic(topic)">
+            Save topic
+          </button>
         </article>
       </div>
     </div>
@@ -29,7 +43,9 @@
           Rust turns time, moisture, and metal into a changing surface. Notice the color shifts,
           fractures, and patterns that appear as materials weather.
         </p>
-        <a class="btn btn-dark rounded-pill align-self-start px-4" routerLink="/collections">Save to collections</a>
+        <button class="btn btn-dark rounded-pill align-self-start px-4" type="button" (click)="saveTopic('Corrosion study')">
+          Save to collections
+        </button>
       </div>
     </article>
   </div>
