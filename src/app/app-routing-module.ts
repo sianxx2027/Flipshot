@@ -5,6 +5,7 @@ import { DiscoverComponent } from './discover/discover';
 import { CollectionsComponent } from './collections/collections';
 import { LoginComponent } from './login/login';
 import { SignupComponent } from './signup/signup';
+import { ProfileComponent } from './profile/profile';
 import { authGuard } from './auth.guard';
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [authGuard] },
   { path: 'discover', component: DiscoverComponent, canActivate: [authGuard] },
   { path: 'collections', component: CollectionsComponent, canActivate: [authGuard] },
+  { path: 'profile', component: ProfileComponent, canActivate: [authGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: '**', redirectTo: 'home' }

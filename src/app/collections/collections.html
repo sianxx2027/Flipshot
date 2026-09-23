@@ -6,13 +6,28 @@
         <h1 class="display-5 fw-bold mb-3">Your visual archive.</h1>
         <p class="lead text-secondary mb-0">Keep the images that make you pause close at hand.</p>
       </div>
-      <button class="btn btn-primary rounded-pill px-4" type="button">New collection</button>
+      <button class="btn btn-primary rounded-pill px-4" type="button" routerLink="/discover">Add more</button>
     </div>
 
-    <div class="empty-state text-center p-5">
-      <div class="empty-icon mx-auto mb-4">+</div>
-      <h2 class="h4">Nothing collected yet</h2>
-      <p class="text-secondary mb-0">Save a discovery and it will appear here.</p>
+    <div *ngIf="collections.length; else emptyState" class="row g-4">
+      <div class="col-md-6 col-xl-4" *ngFor="let topic of collections">
+        <article class="collection-card h-100 p-4">
+          <span class="collection-pill">Saved</span>
+          <h2 class="h4 mt-4 mb-3">{{ topic }}</h2>
+          <p class="text-secondary mb-4">A mood board idea you want close by.</p>
+          <button class="btn btn-outline-danger btn-sm rounded-pill" type="button" (click)="removeTopic(topic)">
+            Remove
+          </button>
+        </article>
+      </div>
     </div>
+
+    <ng-template #emptyState>
+      <div class="empty-state text-center p-5">
+        <div class="empty-icon mx-auto mb-4">+</div>
+        <h2 class="h4">Nothing collected yet</h2>
+        <p class="text-secondary mb-0">Save a discovery and it will appear here.</p>
+      </div>
+    </ng-template>
   </div>
 </section>

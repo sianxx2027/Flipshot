@@ -24,3 +24,22 @@
   color: #fff;
   font-size: 1.5rem;
 }
+
+.collection-card {
+  border: 1px solid #dbeafe;
+  border-radius: 1.25rem;
+  background: linear-gradient(135deg, #ffffff, #eef6ff);
+  box-shadow: 0 1rem 2rem rgba(30, 64, 175, 0.08);
+}
+
+.collection-pill {
+  display: inline-block;
+  padding: 0.42rem 0.7rem;
+  border-radius: 999px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

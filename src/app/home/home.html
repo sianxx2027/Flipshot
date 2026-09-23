@@ -5,13 +5,43 @@
         <p class="eyebrow text-uppercase fw-semibold mb-3">A sharper way to explore</p>
         <h1 class="display-3 fw-bold mb-4">Find your next favorite shot.</h1>
         <p class="lead text-secondary mb-4">Curated visuals and fresh perspectives, ready whenever inspiration strikes.</p>
-        <a class="btn btn-primary btn-lg rounded-pill px-4" routerLink="/discover">Start exploring</a>
+        <div class="d-flex flex-wrap gap-3 mb-5">
+          <a class="btn btn-primary btn-lg rounded-pill px-4" routerLink="/discover">Start exploring</a>
+          <a class="btn btn-outline-primary btn-lg rounded-pill px-4" routerLink="/collections">View collections</a>
+        </div>
+
+        <div class="mini-stats row g-3 text-center">
+          <div class="col-sm-4">
+            <div class="stat-block h-100 p-3">
+              <strong>12k+</strong>
+              <span>ideas</span>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="stat-block h-100 p-3">
+              <strong>320</strong>
+              <span>curators</span>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="stat-block h-100 p-3">
+              <strong>{{ savedTopics.length }}</strong>
+              <span>saved</span>
+            </div>
+          </div>
+        </div>
       </div>
+
       <div class="col-lg-5">
         <div class="feature-panel p-4 p-md-5">
           <span class="feature-label">Featured today</span>
           <h2 class="h3 mt-5 mb-3">Small details. Big atmosphere.</h2>
-          <p class="text-secondary mb-0">Build a visual collection that feels unmistakably yours.</p>
+          <p class="text-secondary mb-4">Build a visual collection that feels unmistakably yours.</p>
+          <div class="feature-list">
+            <span>Color stories</span>
+            <span>Material cues</span>
+            <span>Editorial mood</span>
+          </div>
         </div>
       </div>
     </div>

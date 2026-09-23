@@ -26,3 +26,42 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+
+.mini-stats {
+  max-width: 420px;
+}
+
+.stat-block {
+  border: 1px solid #dbeafe;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.stat-block strong {
+  display: block;
+  font-size: 1.5rem;
+  color: #0f172a;
+}
+
+.stat-block span {
+  color: #64748b;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.feature-list span {
+  display: inline-block;
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  color: #1d4ed8;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
