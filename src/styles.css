@@ -1,0 +1,8 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+body {
+	margin: 0;
+	background: #f8fafc;
+	color: #172554;
+	font-family: Georgia, 'Times New Roman', serif;
+}

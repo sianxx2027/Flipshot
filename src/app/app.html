@@ -1,0 +1,43 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark flipshot-navbar" aria-label="Main navigation">
+	<div class="container py-2">
+		<a class="navbar-brand d-flex align-items-center gap-2" routerLink="/home">
+			<span class="brand-mark" aria-hidden="true">F</span>
+			<span class="fw-semibold">Flipshot</span>
+		</a>
+
+		<button
+			class="navbar-toggler border-0 shadow-none"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#mainNavigation"
+			aria-controls="mainNavigation"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="mainNavigation">
+			<ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+				<li class="nav-item" *ngIf="isAuthenticated()">
+					<a class="nav-link" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+				</li>
+				<li class="nav-item" *ngIf="isAuthenticated()">
+					<a class="nav-link" routerLink="/discover" routerLinkActive="active">Discover</a>
+				</li>
+				<li class="nav-item" *ngIf="isAuthenticated()">
+					<a class="nav-link" routerLink="/collections" routerLinkActive="active">Collections</a>
+				</li>
+				<li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+					<a class="nav-link" routerLink="/login" routerLinkActive="active">Log in</a>
+				</li>
+				<li class="nav-item mt-2 mt-lg-0">
+					<a class="btn btn-light rounded-pill px-4" routerLink="/signup">Sign up</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<router-outlet></router-outlet>

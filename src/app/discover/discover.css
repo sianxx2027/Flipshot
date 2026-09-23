@@ -1,0 +1,41 @@
+.page-section {
+  min-height: calc(100vh - 88px);
+}
+
+.eyebrow {
+  color: #2563eb;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+}
+
+.topic-card {
+  min-height: 220px;
+  border: 1px solid #dbeafe;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 1rem 2rem rgba(15, 23, 42, 0.06);
+}
+
+.topic-number {
+  color: #f59e0b;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.corrosion-feature {
+  border-radius: 1.25rem;
+  background: #fef3c7;
+  box-shadow: 0 1rem 2rem rgba(120, 53, 15, 0.1);
+}
+
+.corrosion-image {
+  display: block;
+  min-height: 320px;
+  object-fit: cover;
+}
+
+@media (max-width: 991.98px) {
+  .corrosion-image {
+    max-height: 360px;
+  }
+}

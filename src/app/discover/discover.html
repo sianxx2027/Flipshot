@@ -1,0 +1,36 @@
+<section class="page-section py-5">
+  <div class="container py-lg-4">
+    <p class="eyebrow text-uppercase fw-semibold mb-2">Discover</p>
+    <h1 class="display-5 fw-bold mb-3">Ideas worth keeping.</h1>
+    <p class="lead text-secondary mb-5">Browse a considered mix of images, moods, and visual inspiration.</p>
+
+    <div class="row g-4">
+      <div class="col-md-4" *ngFor="let topic of ['Quiet mornings', 'Golden hour', 'Urban rhythm']">
+        <article class="topic-card p-4 h-100">
+          <span class="topic-number">0{{ ['Quiet mornings', 'Golden hour', 'Urban rhythm'].indexOf(topic) + 1 }}</span>
+          <h2 class="h4 mt-5 mb-2">{{ topic }}</h2>
+          <p class="text-secondary mb-0">A new visual direction to explore.</p>
+        </article>
+      </div>
+    </div>
+
+    <article class="corrosion-feature row g-0 align-items-stretch mt-5 overflow-hidden">
+      <div class="col-lg-6">
+        <img
+          class="corrosion-image w-100 h-100"
+          src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=85"
+          alt="Weathered industrial metal showing signs of corrosion"
+        />
+      </div>
+      <div class="col-lg-6 p-4 p-md-5 d-flex flex-column justify-content-center">
+        <p class="eyebrow text-uppercase fw-semibold mb-2">Material study</p>
+        <h2 class="display-6 fw-bold mb-3">Corrosion has a texture.</h2>
+        <p class="text-secondary mb-4">
+          Rust turns time, moisture, and metal into a changing surface. Notice the color shifts,
+          fractures, and patterns that appear as materials weather.
+        </p>
+        <a class="btn btn-dark rounded-pill align-self-start px-4" routerLink="/collections">Save to collections</a>
+      </div>
+    </article>
+  </div>
+</section>

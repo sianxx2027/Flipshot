@@ -1,0 +1,73 @@
+<section class="auth-page py-5">
+  <div class="container py-lg-5">
+    <div class="auth-card mx-auto p-4 p-md-5">
+      <p class="eyebrow text-uppercase fw-semibold mb-2">Start collecting</p>
+      <h1 class="h2 fw-bold mb-4">Create your account</h1>
+      <div class="alert alert-success" role="status" *ngIf="signupSuccess">
+        Account created successfully. <a class="alert-link" routerLink="/login">Log in now</a>.
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="signupError">
+        {{ signupError }}
+      </div>
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" novalidate>
+        <label class="form-label" for="signup-name">Name</label>
+        <input
+          class="form-control"
+          [class.is-invalid]="showError('name')"
+          id="signup-name"
+          type="text"
+          placeholder="Your name"
+          formControlName="name"
+        />
+        <div class="invalid-feedback d-block mb-3" *ngIf="showError('name')">
+          <span *ngIf="signupForm.controls.name.hasError('required')">Name is required.</span>
+          <span *ngIf="signupForm.controls.name.hasError('minlength')">Name must be at least 2 characters.</span>
+        </div>
+
+        <label class="form-label" for="signup-email">Email address</label>
+        <input
+          class="form-control"
+          [class.is-invalid]="showError('email')"
+          id="signup-email"
+          type="email"
+          placeholder="you@example.com"
+          formControlName="email"
+        />
+        <div class="invalid-feedback d-block mb-3" *ngIf="showError('email')">
+          <span *ngIf="signupForm.controls.email.hasError('required')">Email is required.</span>
+          <span *ngIf="signupForm.controls.email.hasError('email')">Enter a valid email address.</span>
+        </div>
+
+        <label class="form-label" for="signup-password">Password</label>
+        <input
+          class="form-control"
+          [class.is-invalid]="showError('password')"
+          id="signup-password"
+          type="password"
+          placeholder="Create a password"
+          formControlName="password"
+        />
+        <div class="invalid-feedback d-block mb-3" *ngIf="showError('password')">
+          <span *ngIf="signupForm.controls.password.hasError('required')">Password is required.</span>
+          <span *ngIf="signupForm.controls.password.hasError('minlength')">Password must be at least 8 characters.</span>
+        </div>
+
+        <label class="form-label" for="signup-confirm-password">Confirm password</label>
+        <input
+          class="form-control"
+          [class.is-invalid]="showError('confirmPassword') || (submitted && signupForm.hasError('passwordsDoNotMatch'))"
+          id="signup-confirm-password"
+          type="password"
+          placeholder="Repeat your password"
+          formControlName="confirmPassword"
+        />
+        <div class="invalid-feedback d-block mb-4" *ngIf="showError('confirmPassword') || (submitted && signupForm.hasError('passwordsDoNotMatch'))">
+          <span *ngIf="signupForm.controls.confirmPassword.hasError('required')">Please confirm your password.</span>
+          <span *ngIf="!signupForm.controls.confirmPassword.hasError('required') && signupForm.hasError('passwordsDoNotMatch')">Passwords must match.</span>
+        </div>
+
+        <button class="btn btn-primary w-100 rounded-pill" type="submit">Create account</button>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+.page-section {
+  min-height: calc(100vh - 88px);
+}
+
+.eyebrow {
+  color: #2563eb;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+}
+
+.empty-state {
+  border: 1px dashed #93c5fd;
+  border-radius: 1rem;
+  background: #eff6ff;
+}
+
+.empty-icon {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  font-size: 1.5rem;
+}

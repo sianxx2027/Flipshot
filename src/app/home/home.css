@@ -1,0 +1,28 @@
+.home-page {
+  min-height: calc(100vh - 88px);
+}
+
+.eyebrow {
+  color: #2563eb;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+}
+
+.feature-panel {
+  min-height: 300px;
+  border-radius: 1.5rem;
+  background: linear-gradient(145deg, #fef3c7, #dbeafe);
+  box-shadow: 0 1.5rem 3rem rgba(30, 64, 175, 0.12);
+}
+
+.feature-label {
+  display: inline-block;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #1e3a8a;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
