@@ -40,6 +40,9 @@
 				</li>
 				<li class="nav-item d-flex align-items-center gap-2 mt-2 mt-lg-0" *ngIf="isAuthenticated()">
 					<span class="navbar-user">Hi, {{ userName }}</span>
+					<button class="btn btn-outline-light btn-sm rounded-pill px-3" type="button" (click)="toggleTheme()">
+						{{ isDarkMode() ? 'Light mode' : 'Dark mode' }}
+					</button>
 					<button class="btn btn-outline-light btn-sm rounded-pill px-3" type="button" (click)="logout()">Log out</button>
 				</li>
 			</ul>

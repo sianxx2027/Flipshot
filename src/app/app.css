@@ -1,3 +1,44 @@
+body {
+	transition: background-color 180ms ease, color 180ms ease;
+}
+
+body.flipshot-dark {
+	background: #020817;
+	color: #e2e8f0;
+}
+
+body.flipshot-dark .page-section,
+body.flipshot-dark .home-page,
+body.flipshot-dark .profile-card,
+body.flipshot-dark .collection-card,
+body.flipshot-dark .feature-panel,
+body.flipshot-dark .stat-block,
+body.flipshot-dark .topic-card,
+body.flipshot-dark .empty-state {
+	background: #0f172a;
+	color: #e2e8f0;
+	border-color: rgba(148, 163, 184, 0.28);
+}
+
+body.flipshot-dark .text-secondary,
+body.flipshot-dark .lead,
+body.flipshot-dark p,
+body.flipshot-dark .stat-label,
+body.flipshot-dark .collection-card p,
+body.flipshot-dark .feature-panel p {
+	color: #cbd5e1 !important;
+}
+
+body.flipshot-dark .topic-card,
+body.flipshot-dark .collection-card,
+body.flipshot-dark .profile-card,
+body.flipshot-dark .stat-box,
+body.flipshot-dark .empty-state,
+body.flipshot-dark .feature-panel,
+body.flipshot-dark .stat-block {
+	box-shadow: 0 1rem 2rem rgba(15, 23, 42, 0.42);
+}
+
 .flipshot-navbar {
 	background: #172554;
 	box-shadow: 0 0.5rem 1.5rem rgba(15, 23, 42, 0.16);
