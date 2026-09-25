@@ -1,4 +1,9 @@
-# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files
+# for more about ignoring files.
+
+# =========================
+# Angular / Frontend
+# =========================
 
 # Compiled output
 /dist
@@ -43,6 +48,12 @@ __screenshots__/
 .DS_Store
 Thumbs.db
 
+# =========================
+# Spring Boot / Maven
+# =========================
+
 target/
 .mvn/
+
+# Spring Boot local configuration
 src/main/resources/application.properties
